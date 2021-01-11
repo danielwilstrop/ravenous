@@ -5,12 +5,9 @@ import './buisnesslist.css'
 const BuisnessList = props => {
     return (
         <div className="BusinessList">
-            <Buisness />
-            <Buisness />
-            <Buisness />
-            <Buisness />
-            <Buisness />
-            <Buisness />
+            {props.buisnesses.map( buisness => {
+                return <Buisness buisness = {buisness} />;
+            })}
         </div>
     )
 };
