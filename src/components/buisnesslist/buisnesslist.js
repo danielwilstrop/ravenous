@@ -6,7 +6,7 @@ const BuisnessList = props => {
     return (
         <div className="BusinessList">
             {props.buisnesses.map( buisness => {
-                return <Buisness buisness = {buisness} />;
+                return <Buisness buisness = {buisness} key = {buisness.id} />;
             })}
         </div>
     )

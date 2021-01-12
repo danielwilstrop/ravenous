@@ -4,7 +4,7 @@ import './searchbar.css'
 const SearchBar = props => {
     const renderSortByOptions = () => {
         return Object.keys(sortByOptions).map(sortByOption => {
-            let sortByOptionValue = sortByOptions[sortByOption]
+            let sortByOptionValue = sortByOptions[sortByOption]; 
                 return <li className = {getSortByClass(sortByOptionValue)} key = {sortByOptionValue} onClick ={handleSortByChange.bind(this,sortByOptionValue)}> {sortByOption} </li>
         })
     }
@@ -27,15 +27,20 @@ const SearchBar = props => {
 
       const handleSortByChange = (sortByOption) => {
             setSortBy(sortByOption)
-      }
+      };
 
       const handleTermChange = (event) => {
             setTerm(event.target.value)
-      }
+      };
 
       const hanldeLocationChange = (event) => {
             setLocation(event.target.value)
-      }
+      };
+
+      const handleSearch = (e) => {
+            props.searchYelp(term, location, sortBy)
+            e.preventDefault()
+      };
 
     return (
         <div className="SearchBar">
@@ -49,10 +54,10 @@ const SearchBar = props => {
                 <input placeholder="Where?" onChange = {hanldeLocationChange} />
             </div>
             <div className="SearchBar-submit">
-                <a>Let's Go</a>
+                <button onClick ={handleSearch}>Let's Go</button>
             </div>
         </div>
     )
-}
+};
 
 export default SearchBar;
