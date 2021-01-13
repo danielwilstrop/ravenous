@@ -49,15 +49,15 @@ const SearchBar = props => {
                 {renderSortByOptions()}
                 </ul>
             </div>
-            <div className="SearchBar-fields">
-                <input placeholder="Search Businesses" onChange = {handleTermChange} />
-                <input placeholder="Where?" onChange = {hanldeLocationChange} />
-            </div>
+            <form className="SearchBar-fields" onSubmit = {handleSearch}>
+                <input placeholder="Search Businesses" onChange = {handleTermChange} required/>
+                <input placeholder="Where?" onChange = {hanldeLocationChange} required />
             <div className="SearchBar-submit">
-                <button onClick ={handleSearch}>Let's Go</button>
+                <button >Let's Go</button>
             </div>
+            </form>
         </div>
-    )
-};
+     )
+    };
 
 export default SearchBar;

@@ -41,6 +41,8 @@
     display: flex;
     justify-content: center;
     margin-bottom: 2.88rem;
+    flex-direction: row;
+    flex-wrap: wrap;
   }
   
   .SearchBar-fields input {
@@ -51,6 +53,7 @@
     border-radius: 4px;
     font-size: .77rem;
     font-weight: 500;
+    align-self: stretch;
   }
   
   .SearchBar-fields input:last-child {
@@ -67,8 +70,10 @@
     background-color: #cca353;
     color: #ffffff;
     font-weight: 600;
-    transition: background-color .4s;
-    border-radius: 20px
+    transition: background-color .5s;
+    border-radius: 20px;
+    flex-direction: column;
+    min-width: 100%;
   }
   
   .SearchBar-submit button:hover {

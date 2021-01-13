@@ -17,7 +17,7 @@ const Buisness = props => {
                     <div className="Business-reviews">
                         <h3>{props.buisness.category}</h3>
                         <h3 className="rating">Rating {props.buisness.rating}</h3>
-                        <p className = "rating">Reviews {props.buisness.reviewCount}</p>
+                        <h3 className="rating">Reviews {props.buisness.reviewCount}</h3>
                     </div>
                 </div>
         </div>
